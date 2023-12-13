@@ -1,5 +1,4 @@
 Flask
 Gunicorn
 flask-mqtt
-pymongo[srv]
-Flask-PyMongo
+flask-pymongo
