@@ -137,7 +137,7 @@ app.config['MQTT_BROKER_PORT'] = 1883
 #app.config['MQTT_KEEPALIVE'] = 5  # Set KeepAlive time in seconds
 app.config['MQTT_TLS_ENABLED'] = False  # If your broker supports TLS, set it True
 
-topicname = "uca/M1/iot"
+topicname = "uca/iot/piscine"
 mqtt_client = Mqtt(app)
 
 @mqtt_client.on_connect()
