@@ -126,6 +126,8 @@ def lists_users(): # Liste des utilisateurs déclarés
 @app.route('/publish', methods=['POST'])
 def publish_message():
    request_data = request.get_json()
+    print("\n topic = {}".format(request_data['topic']))
+    
    publish_result = mqtt_client.publish(request_data['topic'], request_data['msg'])
    return jsonify({'code': publish_result[0]})
 
