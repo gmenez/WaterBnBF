@@ -120,11 +120,19 @@ def openthedoor():
 
 @app.route("/users")
 def lists_users(): # Liste des utilisateurs déclarés
+    """
+    curl https://waterbnbf.onrender.com/users
+    """
     todos = userscollection.find()
     return jsonify([todo['name'] for todo in todos])
 
 @app.route('/publish', methods=['POST'])
 def publish_message():
+    """
+    mosquitto_sub -h test.mosquitto.org -t gillou
+    mosquitto_pub -h test.mosquitto.org -t gillou -m tutu
+    curl -X POST -H Content-Type:application/json -d "{\"topic\":\"gillou\",\"msg\":\"hello\"}"  https://waterbnbf.onrender.com/publish
+    """
     content_type = request.headers.get('Content-Type')
     print("\n Content type = {}".format(content_type))
     request_data = request.get_json()
