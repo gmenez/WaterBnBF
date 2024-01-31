@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="esp.css">
+
+  <title>ESP32</title>
+</head>
+
+<body>
+  <h1>ESP32</h1>
+  <div class="cards">
+    <div class="card">
+      <h3>Object status</h3>
+      Uptime : %UPTIME% s<br />
+      Where : %WHERE%<br />
+    </div> 
+
+    <div class="card">
+      <h3>Network link status</h3>
+      WiFi SSID : %SSID%<br />
+      MAC address : %MAC%<br />
+      IP address : %IP%<br />
+    </div>
+
+    <div class="card">
+      <h3>Sensors status</h3>
+      Temperature : %TEMPERATURE% C<br />
+      Light : %LIGHT% Lumen<br />
+      Cooler : %COOLER%<br />
+      Heater : %HEATER%<br />
+    </div>
+
+    <div class="card">
+      <h3>Temp. Regul. Thresholds :</h3>
+      Low Temp : %LT% C<br />
+      High Temp : %HT% C<br />
+    </div>
+
+    <div class="card">
+      <h3>Sensors status in real time</h3>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sensor</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fas fa-thermometer-half" style="color:#059e8a;"></i></td>
+            <td>Temperature</td>
+            <td><span id="temperature">%TEMPERATURE%</span><sup>&deg;C</sup></td>
+          </tr>
+          <tr>
+            <td><i class="far fa-lightbulb" style="color:#00add6;"></i></td>
+            <td>Light</td>
+            <td><span id="light">%LIGHT%</span><sup>Lumen</sup></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-hourglass-half" style="color:rgb(90, 215, 55);"></i></td>
+            <td>Uptime</td>
+            <td><span id="uptime">%UPTIME%</span><sup>s</sup></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-fan" style="color:#ea3131;"></i></td>
+            <td>Heater</td>
+            <td><span id="heater">%HEATER%</span></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-sun" style="color:#6a9fab;"></i></td>
+            <td>Cooler</td>
+            <td><span id="cooler">%COOLER%</span></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-temperature-high" style="color:rgb(255, 42, 0);"></i></td>
+            <td>High Temp</td>
+            <td><span id="ht">%HT%</span></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-temperature-low" style="color:#88e2f7;"></i></td>
+            <td>Low Temp</td>
+            <td><span id="lt">%LT%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3> Periodic status report to :</h3>
+      <form action="/target" method="post">
+        <label for="ip">IP Address :</label>
+        <input type="text" name="ip" placeholder="%PRT_IP%" value="%PRT_IP%" /><br />
+        <label for="port">Port :</label>
+        <input type="text" name="port" placeholder="%PRT_PORT%" value="%PRT_PORT%" /><br />
+        <label for="sp"> Sampling Period (in seconds) :</label>
+        <input type="text" name="sp" placeholder="%PRT_T%" value="%PRT_T%" /><br />
+        <input type="submit" value="Change reporting host !" />
+      </form>
+      <div id="target_status" class="hidden">
+        <h3 id="target_available" class="target_status"></h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const allSensors = "value?temperature&light&uptime&heater&cooler&ht&lt";
+
+    function startUpdate(sensor) {
+      setInterval(function () {
+        const abortController = new AbortController();
+        const signal = abortController.signal;
+
+        setTimeout(() => abortController.abort(), 2500);
+
+        fetch(sensor, {
+            signal: signal
+          })
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+            }
+            if (sensor === allSensors) {
+              return response.json();
+            }
+            return response.text();
+          })
+          .then(function (text) {
+            if (sensor === allSensors) {
+              document.getElementById('temperature').innerHTML = text.temperature ? text.temperature : "N/A";
+              document.getElementById('light').innerHTML = text.light ? text.light : "N/A";
+              document.getElementById('uptime').innerHTML = text.uptime ? text.uptime : "N/A";
+              document.getElementById('heater').innerHTML = text.heat ? text.heat === "true" ? "ON" : "OFF" : "N/A";
+              document.getElementById('cooler').innerHTML = text.cold ? text.cold === "true" ? "ON" : "OFF" : "N/A";
+              document.getElementById('ht').innerHTML = text.ht ? text.ht : "N/A";
+              document.getElementById('lt').innerHTML = text.lt ? text.lt : "N/A";
+              return;
+            }
+            document.getElementById(sensor).innerHTML = text;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }, 10000);
+    }
+
+    function checkTarget() {
+      setInterval(function () {
+        fetch('target_available')
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(function (text) {
+            if (text === "CONNECTED") {
+              document.getElementById('target_status').classList = ["accessible"];
+              document.getElementById('target_available').innerHTML = "Target available !";
+            } else if (text === "CONNECTION FAILED") {
+              document.getElementById('target_status').classList = ["inaccessible"];
+              document.getElementById('target_available').innerHTML = "Target unavailable !";
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }, 10000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // startUpdate('temperature');
+      // startUpdate('light');
+      checkTarget();
+      startUpdate(allSensors);
+    });
+
+  </script>
+</body>
+
+</html>

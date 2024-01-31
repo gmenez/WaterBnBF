@@ -1,42 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>WaterBnB</title>
-    <style>
-      .todo {
-          padding: 20px;
-          margin: 10px;
-          background-color: #eee;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>WaterBnB Front page :  If you need ? </h1>
-    <hr>
-    <div class="content">
-      <form method="post">
-        <p>
-          <b><label for="content">Todo content</label></b>
-        </p>
-        <p>
-          <input type="text" name="content"
-                 placeholder="Todo Content"></input>
-        </p>
+<html lang="fr">
 
-        <p>
-          <b><label for="degree">Degree</label></b>
-        </p>
-        <p>
-          <input id="degree-0" name="degree" required type="radio" value="Important">
-          <label for="degree-0">Important</label>
-        </p>
-        <p>
-          <input id="degree-1" name="degree" required type="radio" value="Unimportant">
-          <label for="degree-1">Unimportant</label>
-        </p>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>WaterBnB</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    hr {
+      border: 0;
+      height: 3px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 123, 255, 0.75), rgba(0, 0, 0, 0));
+    }
+
+    #nbPools {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #007bff;
+    }
+
+    canvas {
+      background-color: white;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>WaterBnB Data Dashboard</h1>
+  <hr>
+
+  <h2 id="nbPools">Number of pools: </h2>
+  <canvas id="requestsChart" width="600" height="300"></canvas>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  let pools = {{ pools | tojson | safe }};
+
+  try {
+    pools = JSON.parse(pools);
+  } catch (e) {
+    console.log(e); 
+  }
+  
+  const poolRequestsData = pools.map(pool => {
+    let grantedCount = 0;
+    let deniedCount = 0;
+  
+    if (pool.request) {
+      pool.request.forEach(req => {
+        if (req.access === 'granted') {
+          grantedCount++;
+        } else if (req.access === 'denied') {
+          deniedCount++;
+        }
+      });
+    }
+  
+    return {
+      ident: pool.ident,
+      grantedCount: grantedCount,
+      deniedCount: deniedCount
+    };
+  });
+  
+  document.getElementById('nbPools').innerHTML = `Number of pools: ${pools.length}`;
+  
+  function renderChart(data) {
+    const ctx = document.getElementById('requestsChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: data.map(d => d.ident),
+        datasets: [
+          {
+            label: 'Number of Granted Requests',
+            data: data.map(d => d.grantedCount),
+            backgroundColor: 'rgba(0, 255, 0, 0.5)',
+            borderColor: 'rgba(0, 255, 0, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Number of Denied Requests',
+            data: data.map(d => d.deniedCount),
+            backgroundColor: 'rgba(255, 0, 0, 0.5)',
+            borderColor: 'rgba(255, 0, 0, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+  renderChart(poolRequestsData);
+</script>
+
 </html>

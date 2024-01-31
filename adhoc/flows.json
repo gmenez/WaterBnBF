@@ -1,0 +1,2039 @@
+[
+    {
+        "id": "1a71bd366947a9f5",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b833599394ddb59",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "83366f2ae17f6be4",
+        "type": "group",
+        "z": "1a71bd366947a9f5",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "eda8471c453de8f6",
+            "21ba37dd7a219a1d",
+            "88d7e8cdb0555883"
+        ],
+        "x": 244,
+        "y": 2059,
+        "w": 772,
+        "h": 142
+    },
+    {
+        "id": "9e75cd1250f513f7",
+        "type": "group",
+        "z": "1a71bd366947a9f5",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "15e32f1cf1ca6ded",
+            "2859c21c115107dc"
+        ],
+        "x": 244,
+        "y": 1959,
+        "w": 412,
+        "h": 82
+    },
+    {
+        "id": "01238fc0e0e2d9c2",
+        "type": "group",
+        "z": "1a71bd366947a9f5",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "34a3f00711c98fd0",
+            "3de9cd99958fb3ec",
+            "5d58f05c3c79d37a",
+            "3fdc77703f15ba4d",
+            "a0d0944d51fdcfe6"
+        ],
+        "x": 234,
+        "y": 2219,
+        "w": 802,
+        "h": 142
+    },
+    {
+        "id": "ef4589908d28089b",
+        "type": "group",
+        "z": "1a71bd366947a9f5",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "696d5eb0eda4fa73",
+            "acb688f0857eac5e",
+            "202e4ba2dd63eb4d",
+            "07617cdc94172e0c"
+        ],
+        "x": 244,
+        "y": 2399,
+        "w": 812,
+        "h": 142
+    },
+    {
+        "id": "7eb2c622fe174444",
+        "type": "serial-port",
+        "serialport": "/dev/tty.usbserial-0001",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\r\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "92d1de2c5ef67ace",
+        "type": "ui_tab",
+        "name": "ESP32",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aad0e5d9ae533d84",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#e26565",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#e26565",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#e26565",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#eea5a5",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#e26565",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "40f7718866d4debb",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "92d1de2c5ef67ace",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6a0f22d5f457ab59",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "92d1de2c5ef67ace",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a64f39dca9066b9",
+        "type": "ui_group",
+        "name": "Temps réel",
+        "tab": "92d1de2c5ef67ace",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b5f37df18890e483",
+        "type": "ui_group",
+        "name": "Critique",
+        "tab": "92d1de2c5ef67ace",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d432d907690b1da5",
+        "type": "ui_group",
+        "name": "Réglages",
+        "tab": "92d1de2c5ef67ace",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "82f8adf372c8a09e",
+        "type": "ui_group",
+        "name": "Réseau",
+        "tab": "92d1de2c5ef67ace",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3a6da5dc2e7da6e8",
+        "type": "mqtt-broker",
+        "name": "Mosquitto server",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "PA",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "665ab3acd5edf473",
+        "type": "ui_tab",
+        "name": "Map",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b9690e9a6f4761a9",
+        "type": "ui_group",
+        "name": "WaterBnB",
+        "tab": "665ab3acd5edf473",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cd15e03f7a9ee55a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "15",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "549cfcd0fa408616",
+        "type": "serial in",
+        "z": "1a71bd366947a9f5",
+        "d": true,
+        "name": "ESP32",
+        "serial": "7eb2c622fe174444",
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "f066facbf65ee969",
+                "ce38bf6872f797ec"
+            ]
+        ]
+    },
+    {
+        "id": "f066facbf65ee969",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "name": "debug serial",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ce38bf6872f797ec",
+        "type": "json",
+        "z": "1a71bd366947a9f5",
+        "name": "parseJSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 380,
+        "wires": [
+            [
+                "f23069a5201eedd6"
+            ]
+        ]
+    },
+    {
+        "id": "b7fa6d9a720d5d16",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractTemp",
+        "func": "msg.topic = \"temperature\";\nmsg.payload = Math.round(msg.payload.status.temperature * 100) / 100\nconsole.log(\"temperature : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 480,
+        "wires": [
+            [
+                "9a12586bb0f012b7",
+                "719c5cacf38c37aa"
+            ]
+        ]
+    },
+    {
+        "id": "f2c955023682910b",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractLight",
+        "func": "msg.topic = \"light\";\nmsg.payload = msg.payload.status.light;\nconsole.log(\"light : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 540,
+        "wires": [
+            [
+                "9a4aec9a19c7cd69",
+                "85275bcb6e806bca"
+            ]
+        ]
+    },
+    {
+        "id": "9a12586bb0f012b7",
+        "type": "ui_chart",
+        "z": "1a71bd366947a9f5",
+        "name": "Chart Temp",
+        "group": "40f7718866d4debb",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Température",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-10",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1750,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a4aec9a19c7cd69",
+        "type": "ui_chart",
+        "z": "1a71bd366947a9f5",
+        "name": "Chart Light",
+        "group": "40f7718866d4debb",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Luminosité",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1750,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68c967e6f833e046",
+        "type": "ui_led",
+        "z": "1a71bd366947a9f5",
+        "order": 2,
+        "group": "b5f37df18890e483",
+        "width": 0,
+        "height": 0,
+        "label": "Incendie en cours !",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Fire",
+        "x": 1950,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9c1aba09503e3af8",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractFire",
+        "func": "msg.topic = \"fireDetection\";\nmsg.payload = msg.payload.status.fire;\nconsole.log(\"fire : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 700,
+        "wires": [
+            [
+                "a0e1b3b9a1af7ad9",
+                "f99ed66ac3116aba"
+            ]
+        ]
+    },
+    {
+        "id": "2550f9d4800556e6",
+        "type": "ui_led",
+        "z": "1a71bd366947a9f5",
+        "order": 2,
+        "group": "6a0f22d5f457ab59",
+        "width": 0,
+        "height": 0,
+        "label": "Regulation",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Regul",
+        "x": 1730,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "979b1158be7e409a",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractRegul",
+        "func": "msg.topic = \"regul\";\nmsg.payload = msg.payload.status.regul === \"RUNNING\";\nconsole.log(\"regul : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 860,
+        "wires": [
+            [
+                "2550f9d4800556e6"
+            ]
+        ]
+    },
+    {
+        "id": "d717ac6b093a7d06",
+        "type": "ui_led",
+        "z": "1a71bd366947a9f5",
+        "order": 2,
+        "group": "6a0f22d5f457ab59",
+        "width": 0,
+        "height": 0,
+        "label": "Chauffage",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Heater",
+        "x": 1730,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "2cdc149aa0e553d2",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractHeater",
+        "func": "msg.topic = \"heat\";\nmsg.payload = msg.payload.status.heat === \"ON\";\nconsole.log(\"heater : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 920,
+        "wires": [
+            [
+                "d717ac6b093a7d06"
+            ]
+        ]
+    },
+    {
+        "id": "a4e898e929ad783d",
+        "type": "ui_led",
+        "z": "1a71bd366947a9f5",
+        "order": 2,
+        "group": "6a0f22d5f457ab59",
+        "width": 0,
+        "height": 0,
+        "label": "Climatisation",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Air conditioner",
+        "x": 1760,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d894fe3f85f359a5",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractCold",
+        "func": "msg.topic = \"cold\";\nmsg.payload = msg.payload.status.cold === \"ON\";\nconsole.log(\"cold : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 980,
+        "wires": [
+            [
+                "a4e898e929ad783d"
+            ]
+        ]
+    },
+    {
+        "id": "85275bcb6e806bca",
+        "type": "ui_gauge",
+        "z": "1a71bd366947a9f5",
+        "name": "Gauge Light",
+        "group": "9a64f39dca9066b9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Luminosité",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "719c5cacf38c37aa",
+        "type": "ui_gauge",
+        "z": "1a71bd366947a9f5",
+        "name": "Gauge Temp",
+        "group": "9a64f39dca9066b9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Température",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1750,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b8a6ce7d3ac40ddf",
+        "type": "ui_ui_control",
+        "z": "1a71bd366947a9f5",
+        "name": "ControlCriticGroupVisibiliby",
+        "events": "all",
+        "x": 2220,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0e1b3b9a1af7ad9",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "checkGroupVisibilityAndFormatForControlUI",
+        "func": "const hasFire = msg.payload;\nmsg.topic = \"uiControl\"\n\nif (hasFire) {\n    msg.payload = {\"group\":{\"show\":[\"ESP32_Critique\"]}}\n} else {\n    msg.payload = {\"group\":{\"hide\":[\"ESP32_Critique\"]}}\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 780,
+        "wires": [
+            [
+                "b8a6ce7d3ac40ddf"
+            ]
+        ]
+    },
+    {
+        "id": "f23069a5201eedd6",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "checkJSON",
+        "func": "// Check status and regul values\nconst status = msg.payload.status;\nconst regul = msg.payload.regul;\nif (isNaN(status.temperature) || isNaN(status.light) || isNaN(regul.ht) || isNaN(regul.lt)) {\n    msg.payload = false;\n}\n\n// Testing purpose\n// msg.payload = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "162c4ecea70725cc"
+            ]
+        ]
+    },
+    {
+        "id": "162c4ecea70725cc",
+        "type": "switch",
+        "z": "1a71bd366947a9f5",
+        "name": "switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 380,
+        "wires": [
+            [
+                "7d3b8f9f95ddeb9f",
+                "c5623abc030cd868"
+            ],
+            [
+                "d9dcd5f9422d3683"
+            ]
+        ]
+    },
+    {
+        "id": "7d3b8f9f95ddeb9f",
+        "type": "change",
+        "z": "1a71bd366947a9f5",
+        "name": "formatNotificationMsg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Les données sont mal formatées, le dashboard ne sera pas mis à jour.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 200,
+        "wires": [
+            [
+                "f1c1340743b056c2"
+            ]
+        ]
+    },
+    {
+        "id": "f1c1340743b056c2",
+        "type": "ui_toast",
+        "z": "1a71bd366947a9f5",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "ParsingErrorNotification",
+        "x": 1810,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9e37b54643a40634",
+        "type": "ui_toast",
+        "z": "1a71bd366947a9f5",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Critique",
+        "name": "FireNotification",
+        "x": 2300,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f99ed66ac3116aba",
+        "type": "switch",
+        "z": "1a71bd366947a9f5",
+        "name": "truthGuard",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1750,
+        "y": 660,
+        "wires": [
+            [
+                "68c967e6f833e046",
+                "e815442ba1717ac0"
+            ]
+        ]
+    },
+    {
+        "id": "e815442ba1717ac0",
+        "type": "change",
+        "z": "1a71bd366947a9f5",
+        "name": "formatNotificationMessage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Incendie en cours !!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 700,
+        "wires": [
+            [
+                "9e37b54643a40634"
+            ]
+        ]
+    },
+    {
+        "id": "46efb9a88b0bfbd4",
+        "type": "serial out",
+        "z": "1a71bd366947a9f5",
+        "d": true,
+        "name": "ESP32_OUT",
+        "serial": "7eb2c622fe174444",
+        "x": 2330,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "89d17b22c11de2c0",
+        "type": "ui_slider",
+        "z": "1a71bd366947a9f5",
+        "name": "Slider HT",
+        "label": "Seuil température haut",
+        "tooltip": "",
+        "group": "d432d907690b1da5",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "40",
+        "step": 1,
+        "className": "",
+        "x": 1740,
+        "y": 1120,
+        "wires": [
+            [
+                "c984c3f2bce168e9"
+            ]
+        ]
+    },
+    {
+        "id": "b24f2149a6fe7a69",
+        "type": "serial out",
+        "z": "1a71bd366947a9f5",
+        "d": true,
+        "name": "ESP32_OUT",
+        "serial": "7eb2c622fe174444",
+        "x": 2330,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "aa448f6117362355",
+        "type": "ui_slider",
+        "z": "1a71bd366947a9f5",
+        "name": "Slider LT",
+        "label": "Seuil température bas",
+        "tooltip": "",
+        "group": "d432d907690b1da5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-10",
+        "max": "40",
+        "step": 1,
+        "className": "",
+        "x": 1740,
+        "y": 1260,
+        "wires": [
+            [
+                "5a1a0ebe4934dc27"
+            ]
+        ]
+    },
+    {
+        "id": "c984c3f2bce168e9",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "convertSliderValueToPayload",
+        "func": "msg.ip = flow.get(\"ip\");\nmsg.ht = msg.payload;\nmsg.payload = `{\"high\": ${msg.payload}}\\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 1120,
+        "wires": [
+            [
+                "46efb9a88b0bfbd4",
+                "741b8d4c84cd6ab1"
+            ]
+        ]
+    },
+    {
+        "id": "592eda08fcbdfe5f",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractTresholdHigh",
+        "func": "msg.topic = \"regulHt\";\nmsg.payload = msg.payload.regul.ht;\nconsole.log(\"regulHt : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 1120,
+        "wires": [
+            [
+                "89d17b22c11de2c0"
+            ]
+        ]
+    },
+    {
+        "id": "87105f8154e8a43d",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractTresholdLow",
+        "func": "msg.topic = \"regulLt\";\nmsg.payload = msg.payload.regul.lt;\nconsole.log(\"regulLt : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 1260,
+        "wires": [
+            [
+                "aa448f6117362355"
+            ]
+        ]
+    },
+    {
+        "id": "5a1a0ebe4934dc27",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "convertSliderValueToPayload",
+        "func": "msg.ip = flow.get(\"ip\");\nmsg.lt = msg.payload;\nmsg.payload = `{\"low\": ${msg.payload}}\\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 1260,
+        "wires": [
+            [
+                "b24f2149a6fe7a69",
+                "506d6b9fd0e499a4"
+            ]
+        ]
+    },
+    {
+        "id": "f931737fb5956b74",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Explication Section Fire",
+        "info": "Quand il y a un incendie de détecter, on affiche un groupe \"Critique\" qui prévient qu'un indencie est en cours.\nSinon ce groupe \"Critique\" est caché.\n\nIl y a aussi une notification qui revient en boucle pour prévenir. ",
+        "x": 2220,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "cfdc8542386bf9f9",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractSSID",
+        "func": "msg.topic = \"ssid\";\nmsg.payload = msg.payload.net.ssid;\nmsg.enabled = false; // disable the field\nconsole.log(\"ssid : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 1360,
+        "wires": [
+            [
+                "8a08e625e83c701e"
+            ]
+        ]
+    },
+    {
+        "id": "53a93e71b5db93fd",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "extractIP",
+        "func": "msg.topic = \"ip\";\nmsg.payload = msg.payload.net.ip;\nmsg.enabled = false; // disable the field\nconsole.log(\"ip : \" + String(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1420,
+        "wires": [
+            [
+                "29af57dc70ad3c54"
+            ]
+        ]
+    },
+    {
+        "id": "8a08e625e83c701e",
+        "type": "ui_text_input",
+        "z": "1a71bd366947a9f5",
+        "name": "SSID label",
+        "label": "SSID",
+        "tooltip": "",
+        "group": "82f8adf372c8a09e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "ssid",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1750,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29af57dc70ad3c54",
+        "type": "ui_text_input",
+        "z": "1a71bd366947a9f5",
+        "name": "IP Label",
+        "label": "IP",
+        "tooltip": "",
+        "group": "82f8adf372c8a09e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "ip",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1740,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40623c95b412bd21",
+        "type": "http in",
+        "z": "1a71bd366947a9f5",
+        "name": "[POST] Periodic report",
+        "url": "/esp",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 460,
+        "wires": [
+            [
+                "3993608e0507b5d0",
+                "f23069a5201eedd6"
+            ]
+        ]
+    },
+    {
+        "id": "3993608e0507b5d0",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "name": "debug http",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a912521125de872c",
+        "type": "http response",
+        "z": "1a71bd366947a9f5",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1480,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f3f1f3a7465c6dbf",
+        "type": "http response",
+        "z": "1a71bd366947a9f5",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1760,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c5623abc030cd868",
+        "type": "change",
+        "z": "1a71bd366947a9f5",
+        "name": "formatHTTPErrorPayload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"error\":\"Data cannot be parsed\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 260,
+        "wires": [
+            [
+                "f3f1f3a7465c6dbf"
+            ]
+        ]
+    },
+    {
+        "id": "741b8d4c84cd6ab1",
+        "type": "http request",
+        "z": "1a71bd366947a9f5",
+        "name": "Set Treshold HT",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://{{ip}}/set?ht={{ht}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2340,
+        "y": 1160,
+        "wires": [
+            [
+                "12ab60a0d60b1ccd"
+            ]
+        ]
+    },
+    {
+        "id": "506d6b9fd0e499a4",
+        "type": "http request",
+        "z": "1a71bd366947a9f5",
+        "name": "Set Treshold LT",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://{{ip}}/set?lt={{lt}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2340,
+        "y": 1300,
+        "wires": [
+            [
+                "12ab60a0d60b1ccd"
+            ]
+        ]
+    },
+    {
+        "id": "d9dcd5f9422d3683",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "setFlowValues",
+        "func": "flow.set(\"ip\", msg.payload.net.ip);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 460,
+        "wires": [
+            [
+                "a912521125de872c",
+                "b7fa6d9a720d5d16",
+                "f2c955023682910b",
+                "9c1aba09503e3af8",
+                "979b1158be7e409a",
+                "2cdc149aa0e553d2",
+                "d894fe3f85f359a5",
+                "592eda08fcbdfe5f",
+                "87105f8154e8a43d",
+                "cfdc8542386bf9f9",
+                "53a93e71b5db93fd"
+            ]
+        ]
+    },
+    {
+        "id": "ac13e5a484a4cb0b",
+        "type": "ui_toast",
+        "z": "1a71bd366947a9f5",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Seuil",
+        "name": "tresholdUpdateNotification",
+        "x": 2960,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "12ab60a0d60b1ccd",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "formatNotificationPayload",
+        "func": "if (msg.statusCode === 200) {\n    msg.payload = \"Seuil mis à jour avec succès !\";\n} else {\n    msg.payload = \"Il y a eu un problème lors de la mise à jour du seuil.\"\n}\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2670,
+        "y": 1240,
+        "wires": [
+            [
+                "ac13e5a484a4cb0b"
+            ]
+        ]
+    },
+    {
+        "id": "e45c35064b751872",
+        "type": "mqtt in",
+        "z": "1a71bd366947a9f5",
+        "name": "Periodic report",
+        "topic": "uca/iot/piscine",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3a6da5dc2e7da6e8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "6763bcce3adcfd06"
+            ]
+        ]
+    },
+    {
+        "id": "a8d68a966eba6403",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "name": "debug mqtt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6763bcce3adcfd06",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "checkEspIdentity",
+        "func": "if (!msg.payload.net) {\n    console.log('no net detail')\n    return false;\n}\n\nconst mac = msg.payload.net.mac;\n\nif (mac === \"C8:C9:A3:FB:12:88\") {\n    return msg;\n}\n\nreturn false; ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "a8d68a966eba6403",
+                "f23069a5201eedd6"
+            ]
+        ]
+    },
+    {
+        "id": "3847cab649b9872b",
+        "type": "inject",
+        "z": "1a71bd366947a9f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 340,
+        "y": 1860,
+        "wires": [
+            [
+                "9ae26d6618943d85"
+            ]
+        ]
+    },
+    {
+        "id": "9ae26d6618943d85",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "name": "Téléportation",
+        "func": "// create random position\nvar lat = 43.61999752 + Math.random() * 0.1;\nvar lon = 7.0499998 + Math.random() * 0.1;\nmsg.payload={\n    layer:\"swimming pools\",\n    lat:lat, \n    lon:lon, \n    name:global.get(\"clientid\"), \n    description: \"Temperature in my swimming pool\",\n    value: 20.5,\n    unit: \"°C\",\n    icon:\"male\", \n    color:\"#000\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1900,
+        "wires": [
+            [
+                "d3292f31a1bf1808",
+                "ecf8d6f24a525003",
+                "98c72a7834ba6b9b"
+            ]
+        ]
+    },
+    {
+        "id": "c19d4ff97ba63fa9",
+        "type": "ui_button",
+        "z": "1a71bd366947a9f5",
+        "name": "",
+        "group": "b9690e9a6f4761a9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Move Client",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-male",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 340,
+        "y": 1920,
+        "wires": [
+            [
+                "9ae26d6618943d85"
+            ]
+        ]
+    },
+    {
+        "id": "d3292f31a1bf1808",
+        "type": "worldmap-tracks",
+        "z": "1a71bd366947a9f5",
+        "name": "",
+        "depth": "6",
+        "layer": "combined",
+        "smooth": false,
+        "x": 800,
+        "y": 1880,
+        "wires": [
+            [
+                "ecf8d6f24a525003"
+            ]
+        ]
+    },
+    {
+        "id": "ecf8d6f24a525003",
+        "type": "ui_worldmap",
+        "z": "1a71bd366947a9f5",
+        "group": "b9690e9a6f4761a9",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "lat": "43.61999752",
+        "lon": "7.0499998",
+        "zoom": "11",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "deg",
+        "showgrid": "true",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,TL,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1370,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "98c72a7834ba6b9b",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "cbce1aead5f4cfac",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Formulaire d'identification du client",
+        "info": "Grâce au formulaire, on positionne une variable globale au flow : l'ident du client qui utilise le service.",
+        "x": 1390,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "a79c4eef37821b7e",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Fichier WaterBnB.json => Dashboard \"donné\" à un client du service WaterBnB",
+        "info": "Lorsqu'un client va vouloir accéder à une piscine, il va devoir utiliser cette interface graphique.\n",
+        "x": 500,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "bcd0e84f96452f92",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Reset display",
+        "info": "",
+        "x": 800,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "bcf718838a08b3fa",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Affichage avec hyperlien d'ouverture des piscines ",
+        "info": "",
+        "x": 1430,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "c4f5d7f0371cb002",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "Affichage de la géolocalisation du client de WaterBnB",
+        "info": "",
+        "x": 1310,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "1859997bac9440b5",
+        "type": "comment",
+        "z": "1a71bd366947a9f5",
+        "name": "trois choses à paramétrer => le topic de owntracks, le lien de demande d'ouverture et l'ID du client via le formulaire",
+        "info": "Lorsqu'un client va vouloir accéder à une piscine, il va devoir utiliser cette interface graphique.\n",
+        "x": 610,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "eda8471c453de8f6",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "g": "83366f2ae17f6be4",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "21ba37dd7a219a1d",
+        "type": "ui_form",
+        "z": "1a71bd366947a9f5",
+        "g": "83366f2ae17f6be4",
+        "name": "WaterBnB Client Identification",
+        "label": "WaterBnB Client Login (= numéro étudiant UCA)",
+        "group": "b9690e9a6f4761a9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Client ID",
+                "value": "clientid",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "clientid": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "clientform",
+        "topicType": "str",
+        "splitLayout": false,
+        "className": "",
+        "x": 400,
+        "y": 2140,
+        "wires": [
+            [
+                "eda8471c453de8f6",
+                "88d7e8cdb0555883"
+            ]
+        ]
+    },
+    {
+        "id": "88d7e8cdb0555883",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "g": "83366f2ae17f6be4",
+        "name": "Callback du formulaire d'identification",
+        "func": "// Ce node permet de stocker l'identificateur du \n// client dans le flow (un peu comme une variable \n// globale)\n\n\n//https://stevesnoderedguide.com/node-red-variables\n//https://techexplorations.com/guides/esp32/node-red-esp32-project/node-red-messages-variables/\n\nif (msg.topic === \"clientform\"){\n  flow.set(\"clientid\", msg.payload.clientid);\n  }\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15e32f1cf1ca6ded",
+        "type": "ui_button",
+        "z": "1a71bd366947a9f5",
+        "g": "9e75cd1250f513f7",
+        "name": "",
+        "group": "b9690e9a6f4761a9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 2000,
+        "wires": [
+            [
+                "2859c21c115107dc"
+            ]
+        ]
+    },
+    {
+        "id": "2859c21c115107dc",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "g": "9e75cd1250f513f7",
+        "name": "Reset Layer",
+        "func": "// clear the \"by default\" layer \nmsg.payload = {\"command\": { \"clear\": \"swimming pools\" } };\nflow.set(\"clientid\", null);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 2000,
+        "wires": [
+            [
+                "ecf8d6f24a525003"
+            ]
+        ]
+    },
+    {
+        "id": "34a3f00711c98fd0",
+        "type": "mqtt in",
+        "z": "1a71bd366947a9f5",
+        "g": "01238fc0e0e2d9c2",
+        "name": "",
+        "topic": "uca/iot/piscine",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "3a6da5dc2e7da6e8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 2280,
+        "wires": [
+            [
+                "5d58f05c3c79d37a",
+                "a0d0944d51fdcfe6"
+            ]
+        ]
+    },
+    {
+        "id": "3de9cd99958fb3ec",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "g": "01238fc0e0e2d9c2",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "5d58f05c3c79d37a",
+        "type": "json",
+        "z": "1a71bd366947a9f5",
+        "g": "01238fc0e0e2d9c2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 540,
+        "y": 2320,
+        "wires": [
+            [
+                "3fdc77703f15ba4d"
+            ]
+        ]
+    },
+    {
+        "id": "3fdc77703f15ba4d",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "g": "01238fc0e0e2d9c2",
+        "name": "json adapt",
+        "func": "//http://stevesnoderedguide.com/node-red-functions\n\nvar nmsg = { // nouveau message \n  topic: msg.topic // on garde l'ancien topic \n};\n\nvar busy;\n\nif (msg.payload.piscine.occuped === false)\n  busy = \"battery-empty\";\nelse {\n  busy = \"battery-full\";\n\n}\n\nvar hsc;\nif (msg.payload.piscine.hotspot === false)\n  hsc = \"Blue\";\nelse\n  hsc = \"Red\";\n\nvar wl_label = `Lien de demande d'ouverture de ${msg.payload.info.ident} par ${flow.get('clientid')}  : Cliquez moi !`\n\nconst route = 'open'\n\n// const wl_url = `http://127.0.0.1:5000/${route}?ident=${msg.payload.info.ident}&clientid=${flow.get('clientid')}`\n// const wl_url = `https://waterbnb-auzk.onrender.com/${route}?ident=${msg.payload.info.ident}&clientid=${flow.get('clientid')}`\nconst wl_url = `http://217.160.51.173:5000/${route}?ident=${msg.payload.info.ident}&clientid=${flow.get('clientid')}`\n\nnmsg.payload = { // on modifie/adapte la payload\n  layer: \"swimming pools\",\n  name: msg.payload.info.ident,\n  description: msg.payload.info.user,\n  weblink: {\"name\": wl_label,\"url\": wl_url},\n  radius:100,\n  unit: \"C\",\n  color: \"#000\",\n  value: msg.payload.status.temperature,\n  lat: msg.payload.location.gps.lat,\n  lon: msg.payload.location.gps.lon,\n  iconColor: hsc,\n  icon: busy\n}\n\nreturn nmsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 2320,
+        "wires": [
+            [
+                "ecf8d6f24a525003",
+                "3de9cd99958fb3ec"
+            ]
+        ]
+    },
+    {
+        "id": "a0d0944d51fdcfe6",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "g": "01238fc0e0e2d9c2",
+        "name": "debug  from swimming pools",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "696d5eb0eda4fa73",
+        "type": "mqtt in",
+        "z": "1a71bd366947a9f5",
+        "g": "ef4589908d28089b",
+        "name": "",
+        "topic": "uca/waterbnb/GillesM/a50",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "cd15e03f7a9ee55a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 2480,
+        "wires": [
+            [
+                "202e4ba2dd63eb4d"
+            ]
+        ]
+    },
+    {
+        "id": "acb688f0857eac5e",
+        "type": "debug",
+        "z": "1a71bd366947a9f5",
+        "g": "ef4589908d28089b",
+        "name": "debug from owntracks MQTT topic",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "202e4ba2dd63eb4d",
+        "type": "json",
+        "z": "1a71bd366947a9f5",
+        "g": "ef4589908d28089b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 600,
+        "y": 2480,
+        "wires": [
+            [
+                "acb688f0857eac5e",
+                "07617cdc94172e0c"
+            ]
+        ]
+    },
+    {
+        "id": "07617cdc94172e0c",
+        "type": "function",
+        "z": "1a71bd366947a9f5",
+        "g": "ef4589908d28089b",
+        "name": "json convert",
+        "func": "// Convert json of owntracks to worldmap\nreturn {\n    payload: {\n        layer:\"waterbnb\",\n        name: msg.payload.tid,\n        lat: msg.payload.lat,\n        lon: msg.payload.lon,\n        icon: 'user-circle-o',\n        iconColor : \"Blue\"\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2440,
+        "wires": [
+            [
+                "ecf8d6f24a525003"
+            ]
+        ]
+    }
+]

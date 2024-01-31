@@ -1,0 +1,1 @@
+double getDistance(double lng, double lat);
